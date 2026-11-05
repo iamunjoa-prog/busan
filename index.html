@@ -45,6 +45,9 @@ h1{font-size:30px;line-height:1.25;letter-spacing:-.03em;margin:10px 0 6px;font-
 .taxi{margin-top:10px;font-size:12px;color:var(--sub)}
 .taxi b{color:var(--ink);font-weight:600}
 @media(max-width:520px){.stop{grid-template-columns:1fr}.time{padding:0 0 4px}.eat{grid-column:1}.walk{font-size:11px;padding:3px 7px}}
+
+.maplink{grid-column:2;display:inline-flex;align-items:center;gap:8px;margin-top:12px;font-size:13px;font-weight:600;width:max-content}.maplink .go{width:22px;height:22px;font-size:11px}
+@media(max-width:520px){.maplink{grid-column:1}}
 footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--sub);text-align:center}
 </style>
 </head>
@@ -83,6 +86,7 @@ fri:{title:'DAY 1 · 부산역에서 해운대로',route:'부산역 → 차이�
    ['홍성방','중식 · 만두, 볶음밥, 탕수육','도보 5분'],
    ['신발원','중식 · 고기만두, 군만두','도보 5분'],
    ['장성향','중식 · 여러 메뉴 나눠 먹기 좋아요','도보 5분'],
+   ['마가만두','중식 · 만두, 오향장육, 볶음밥, 탕수육','도보 5분'],
    ['초량밀면','밀면 · 왕만두 조합','도보 8분'],
    ['본전돼지국밥','국밥 · 웨이팅이 길면 다른 후보로','도보 8분']]}},
  {t:'12:50–14:10',h:'택시로 한화리조트 해운대',p:'체크인보다 짐 보관 먼저. 입실은 저녁으로 미뤄도 괜찮아요.'},
@@ -90,7 +94,9 @@ fri:{title:'DAY 1 · 부산역에서 해운대로',route:'부산역 → 차이�
  {t:'15:45',h:'미포 → 청사포 스카이캡슐',p:'약 30분간 바다 풍경을 즐겨요. 바다 쪽 자리는 아이들에게.'},
  {t:'16:20–17:20',h:'청사포 등대와 간식',p:'기찻길 → 빨간·하얀 등대 → 어묵이나 따뜻한 음료. 바람이 세면 산책을 줄여요.',
   eat:{label:'간식·이른 저녁 후보',base:'청사포 기준',items:[
-   ['수민이네 청사포','조개구이·해산물 · 아이가 해산물을 잘 먹을 때','도보 5분']]}},
+   ['수민이네 청사포','조개구이·장어 · 바다 보며 연탄불에 굽는 집','도보 5분'],
+   ['도희네 (파도소리장어구이)','가리비·장어구이, 물회·모둠회 · 창가에서 바다 전망','도보 5–10분']],
+   note:'조개구이·장어는 아이가 먹기 어려울 수 있어요. 이른 저녁(17시 전후)에 가면 대기가 덜해요. 아이 메뉴(라면·밥)가 되는지 전화로 확인해 보세요.'}},
  {t:'17:30',h:'해변열차로 미포 복귀',p:'청사포역에 15–20분 일찍 가요. 아이들이 지치면 택시로 해운대로.'},
  {t:'18:10 이후',h:'해운대 저녁 & 숙소',p:'컨디션에 맞춰 골라요. 미포 쪽에서 가까운 순으로 정리했어요.',
   eat:{label:'저녁 후보',base:'미포·해운대 기준',items:[
@@ -101,16 +107,29 @@ fri:{title:'DAY 1 · 부산역에서 해운대로',route:'부산역 → 차이�
    ['해운대암소갈비집','갈비 · 예약·대기 확인','도보 15분 내외'],
    ['해운대 소문난암소갈비','갈비 · 2안','도보 15분 내외'],
    ['상국이네','분식 · 어묵, 튀김','도보 15분 내외'],
-   ['해운대 빨간떡볶이','분식 · 아이 메뉴는 별도로','도보 15분 내외']]}}
+   ['해운대 빨간떡볶이','분식 · 아이 메뉴는 별도로','도보 15분 내외']]},
+  eat2:{label:'숙소로 포장·배달 후보',base:'리조트 방에서 먹기',items:[
+   ['해운대 하얀오징어집','오징어회 · 포장 가능, 주말엔 조리 30–40분','포장 가능'],
+   ['동백섬횟집','회 · 모둠회 (아이는 초밥·회덮밥류 확인)','포장·배달 확인'],
+   ['금수복국 해운대본점','복국 · 맑고 담백해 엄마들 저녁으로','포장·배달 확인'],
+   ['밀양순대돼지국밥 해운대점','국밥 · 부산 대표 한 끼','포장·배달 확인']],
+   note:'배달 가능 여부는 확인하지 못했어요. 배달의민족·쿠팡이츠에서 주소를 리조트로 설정하고 "해운대 회·국밥·밀면"을 검색해 보는 게 가장 정확해요.'}}
 ]},
 sat:{title:'DAY 2 · 영도 커피와 원도심',route:'한화리조트 → 부산역 짐보관 → 영도 모모스 → 점심 → 남포동 → 부산역',stops:[
- {t:'09:00–09:45',h:'느긋한 아침',p:'리조트에서 먹고 체크아웃 준비를 마쳐요.'},
+ {t:'09:00–09:45',h:'느긋한 아침',p:'리조트에서 먹거나 근처에서 가볍게 먹고 체크아웃 준비를 마쳐요.',
+  eat:{label:'아침 후보',base:'리조트 기준',items:[
+   ['한화리조트 해운대 조식','리조트 조식뷔페 · 7:00–9:30 운영 정보, 유료','숙소 내'],
+   ['해운대 원조할매국밥','소고기국밥 · 08:30 오픈, 국물이 순해요','도보·택시 확인'],
+   ['금수복국 해운대본점','복국 · 맑은 국물, 아침엔 대기 있을 수 있어요','도보·택시 확인'],
+   ['해운대 기와집대구탕','대구탕 · 아침 코스로 소개됨','영업시간 확인']],
+   note:'9시 이후 영업이 확실한 곳을 다 확인하진 못했어요. 지도에서 영업시간과 리조트 기준 도보 시간을 꼭 확인해 주세요.'}},
  {t:'10:00',h:'부산역으로 택시 직행',p:'출발 직전 지도로 예상시간 확인. 70분 이내면 택시, 80분 이상이면 지하철.'},
  {t:'11:00–11:35',h:'부산역 짐 보관',p:'코인로커가 차면 유인 보관소로. 기차표와 귀중품은 직접 소지해요.'},
- {t:'11:40–13:10',h:'영도 모모스커피 로스터리',p:'엄마들은 커피, 아이들은 주스·베이커리. 봉래나루로 160, 60–70분 머물러요.'},
- {t:'13:15–14:25',h:'영도 점심',p:'걸어서 갈 수 있는 곳은 한 곳이에요. 나머지는 택시가 필요해요.',
+ {t:'11:40–13:10',h:'영도 모모스커피 로스터리',p:'엄마들은 커피, 아이들은 주스·베이커리. 봉래나루로 160, 60–70분 머물러요.',link:['모모스커피 로스터리 봉래나루로 160','네이버지도에서 모모스 보기']},
+ {t:'13:15–14:25',h:'영도 점심',p:'모모스에서 걸어갈 만한 곳은 아래 두 곳이에요. 국밥·중식은 택시가 필요해요.',
   eat:{label:'점심 후보',base:'모모스 기준',items:[
-   ['스페이스 원지','양식 · 피자, 버거, 파스타 (아이 동반 1순위)','도보권 · 같은 봉래나루로']],
+   ['스페이스 원지','양식 · 피자, 버거, 파스타 (아이 동반 1순위)','도보권 · 같은 봉래나루로'],
+   ['삼진어묵 본점','어묵 · 즉석 어묵, 베이커리, 어묵 역사관','도보 10분대 (확인)']],
    taxi:'택시 이동 <b>재기돼지국밥</b>(국밥) · <b>화복반점</b>(중식) · <b>왔다식당</b>(한식, 마지막 주문 이른 편) · <b>백설대학</b>(분식)',
    taxiNames:['재기돼지국밥','화복반점','왔다식당','백설대학']}},
  {t:'14:30–16:15',h:'남포동 산책',p:'광복로 → BIFF광장 → 깡통시장. 지치면 롯데백화점 광복점에서 쉬어요.',
@@ -129,12 +148,13 @@ sat:{title:'DAY 2 · 영도 커피와 원도심',route:'한화리조트 → 부�
 
 const naver=n=>'https://map.naver.com/p/search/'+encodeURIComponent(n+' 부산');
 function eatHTML(e){
+  const note=e.note?`<div class="taxi">${e.note}</div>`:'';
   const rows=e.items.map(([n,d,w])=>`<a class="item" target="_blank" rel="noopener" href="${naver(n)}"><div class="meta"><div class="name">${n}</div><div class="desc">${d}</div></div><span class="walk">${w}</span><span class="go" aria-label="네이버지도">N</span></a>`).join('');
   const taxi=e.taxi?`<div class="taxi">${e.taxiNames.map(n=>`<a target="_blank" rel="noopener" href="${naver(n)}"><b>${n}</b></a>`).join(' · ')} <span>— 도보 아님, 택시 필요</span></div>`:'';
-  return `<div class="eat"><div class="eat-h">${e.label}<span>${e.base}</span></div><div class="list">${rows}</div>${taxi}</div>`;
+  return `<div class="eat"><div class="eat-h">${e.label}<span>${e.base}</span></div><div class="list">${rows}</div>${taxi}${note}</div>`;
 }
 for(const [id,d] of Object.entries(days)){
-  document.getElementById(id).innerHTML=`<h2 class="day-title">${d.title}</h2><p class="route">${d.route}</p>`+d.stops.map(s=>`<article class="stop"><div class="time">${s.t}</div><div><h3>${s.h}</h3><p>${s.p}</p></div>${s.eat?eatHTML(s.eat):''}</article>`).join('');
+  document.getElementById(id).innerHTML=`<h2 class="day-title">${d.title}</h2><p class="route">${d.route}</p>`+d.stops.map(s=>`<article class="stop"><div class="time">${s.t}</div><div><h3>${s.h}</h3><p>${s.p}</p></div>${s.link?`<a class="maplink" target="_blank" rel="noopener" href="${naver(s.link[0]).replace('%20%EB%B6%80%EC%82%B0','')}"><span class="go">N</span>${s.link[1]}</a>`:''}${s.eat?eatHTML(s.eat):''}${s.eat2?eatHTML(s.eat2):''}</article>`).join('');
 }
 document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{
   document.querySelectorAll('.tab,.panel').forEach(x=>x.classList.remove('on'));
